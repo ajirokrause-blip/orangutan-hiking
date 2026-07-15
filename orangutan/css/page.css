@@ -1,0 +1,303 @@
+/* ---------- INTERIOR PAGE HERO ---------- */
+.page-hero {
+  background: var(--canopy);
+  color: var(--parchment-2);
+  padding: var(--space-6) var(--content-pad);
+}
+
+.page-hero h1 {
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-2);
+  max-width: var(--measure-wide);
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sage);
+}
+
+.page-hero__lead {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--hero-muted);
+  max-width: var(--measure-prose);
+}
+
+.page-hero--with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) var(--content-pad);
+}
+
+.page-hero--with-image .page-hero__image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--ledger-grid-line);
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-md);
+}
+
+.page-hero--with-image .page-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- PAGE BODY ---------- */
+.page-body {
+  padding: var(--space-6) var(--content-pad);
+}
+
+.page-body--end {
+  padding-bottom: var(--space-7);
+}
+
+.page-body .wrap > * + * {
+  margin-top: var(--space-5);
+}
+
+.prose {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink-body);
+  max-width: var(--measure-prose);
+}
+
+.prose p + p { margin-top: var(--space-paragraph); }
+
+/* ---------- FACT STRIP ---------- */
+.fact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0 0 var(--space-1);
+  border: none;
+}
+
+.fact-strip b {
+  color: var(--clay-dark);
+  font-weight: 600;
+}
+
+/* ---------- META CHIP (shared with home trek-stats) ---------- */
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  background: var(--parchment);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+  color: var(--ink-body);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- MEDIA ROW ---------- */
+.media-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.media-row--reverse { direction: rtl; }
+.media-row--reverse > * { direction: ltr; }
+
+.media-row__image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-warm);
+}
+
+.media-row__image img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.media-row__text h2,
+.info-section h2,
+.hub-card__body h2,
+.booking-section__heading,
+.pillar-section__heading {
+  font-size: var(--text-section);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- PILLAR GRID (About) ---------- */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-cell {
+  background: var(--parchment);
+  padding: 28px var(--space-3);
+}
+
+.pillar-cell h3 {
+  font-family: 'Fraunces', serif;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+  color: var(--ink);
+}
+
+.pillar-cell p {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink-body);
+}
+
+/* ---------- HUB CARDS ---------- */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.hub-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--parchment);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hub-card:hover {
+  border-color: var(--clay);
+  box-shadow: var(--shadow-warm);
+  transform: translateY(-2px);
+}
+
+.hub-card__image img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.hub-card__body {
+  padding: 22px var(--space-3) 26px;
+}
+
+.hub-card__body p {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink-body);
+}
+
+.hub-card__meta {
+  margin-top: var(--space-2);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  color: var(--clay-dark);
+}
+
+/* ---------- BUTTONS ---------- */
+.cta-strip {
+  padding: var(--space-4) 0 var(--space-1);
+  border-top: none;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--parchment-2);
+  background: var(--clay);
+  text-decoration: none;
+  padding: 14px var(--space-3);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-warm);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  color: var(--parchment-2);
+  background: var(--clay-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(143, 78, 42, 0.25);
+}
+
+.btn-outline {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clay-dark);
+  background: transparent;
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 1px solid var(--clay);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  color: var(--parchment-2);
+  background: var(--clay);
+  border-color: var(--clay);
+}
+
+/* ---------- INFO SECTIONS (Contact) ---------- */
+.info-section {
+  padding: 28px 0;
+  border-top: 1px solid var(--border-warm);
+}
+
+.info-section--first {
+  border-top: none;
+  padding-top: 0;
+}
+
+.info-section p {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink-body);
+  max-width: var(--measure-prose);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 860px) {
+  .page-hero--with-image {
+    grid-template-columns: 1fr;
+    padding: var(--space-5) var(--content-pad);
+  }
+
+  .media-row,
+  .media-row--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .pillar-grid,
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
