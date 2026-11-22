@@ -7,9 +7,11 @@ Static HTML/CSS/JS site. No build step required.
 Upload all files and folders to your web host’s document root (same level as `index.html`):
 
 - `index.html` — home page and trek selector
-- `about.html`, `contact.html`, `explore-activity.html`
+- `about.html`, `contact.html`, `book.html`, `explore-activity.html`
 - Trek and activity pages (`easy-trek.html`, etc.)
 - `css/`, `js/`, `images/`
+
+`book.html` sends trek requests through a Google Apps Script web app. Deploy steps are at the top of `booking/Code.gs`. Paste the deployed `/exec` URL into `BOOKING_ENDPOINT` in `js/booking.js`.
 
 Point your domain at this folder, or open `index.html` locally to preview.
 

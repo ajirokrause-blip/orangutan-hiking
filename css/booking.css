@@ -1,0 +1,184 @@
+/* Trek request form. Loaded only by book.html. */
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: var(--measure-prose);
+  position: relative;
+}
+
+.book-field label {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clay-dark);
+  margin-bottom: var(--space-1);
+}
+
+.book-field input,
+.book-field select,
+.book-field textarea {
+  display: block;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink);
+  background: var(--parchment);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 12px var(--space-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.book-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.book-field select {
+  appearance: auto;
+}
+
+.book-field input:focus-visible,
+.book-field select:focus-visible,
+.book-field textarea:focus-visible,
+.book-form button:focus-visible,
+.book-alert a:focus-visible,
+.book-success a:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+}
+
+.book-field input[aria-invalid="true"],
+.book-field select[aria-invalid="true"],
+.book-field textarea[aria-invalid="true"] {
+  border-color: var(--clay-dark);
+}
+
+.book-optional {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin-left: var(--space-1);
+}
+
+.book-hint,
+.book-note,
+.book-error {
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  margin-top: var(--space-1);
+}
+
+.book-hint,
+.book-note {
+  color: var(--ink-soft);
+  max-width: var(--measure-prose);
+}
+
+.book-note {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.book-error {
+  color: var(--clay-dark);
+}
+
+.book-error[hidden] {
+  display: none;
+}
+
+.book-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+button.btn-primary,
+button.btn-outline {
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+button.btn-primary {
+  border: none;
+}
+
+button.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
+.book-noscript {
+  max-width: var(--measure-prose);
+  margin-bottom: var(--space-4);
+  color: var(--ink-body);
+}
+
+.book-noscript a {
+  color: var(--clay-dark);
+}
+
+.book-alert {
+  border: 1px solid var(--clay);
+  background: var(--parchment);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  color: var(--ink-body);
+}
+
+.book-alert p + p,
+.book-alert p + .book-actions {
+  margin-top: var(--space-2);
+}
+
+.book-alert a {
+  color: var(--clay-dark);
+}
+
+.book-success {
+  max-width: var(--measure-prose);
+}
+
+.book-success h2 {
+  font-size: var(--text-section);
+  margin-bottom: var(--space-3);
+}
+
+.book-success:focus {
+  outline: none;
+}
+
+.book-success:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 4px;
+}
+
+.book-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .book-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

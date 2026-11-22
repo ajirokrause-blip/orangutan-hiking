@@ -146,6 +146,10 @@
   object-fit: cover;
 }
 
+.timeline-beat__media--portrait img {
+  aspect-ratio: 3 / 4;
+}
+
 .timeline-beat--text-only {
   grid-template-columns: 1fr;
   max-width: none;
