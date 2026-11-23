@@ -36,11 +36,13 @@
 
 .map-panel {
   position: sticky;
-  top: var(--map-sticky-top);
-  width: 400px;
+  top: max(var(--map-sticky-top), calc((100vh - min(640px, var(--map-sticky-height))) / 2));
+  width: min(400px, calc(var(--map-sticky-height) * 5 / 8));
   flex-shrink: 0;
-  height: var(--map-sticky-height);
-  margin: var(--map-gap) 0;
+  aspect-ratio: 5 / 8;
+  height: auto;
+  max-height: var(--map-sticky-height);
+  margin: var(--space-4) 0 0;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-strong);
   box-shadow: var(--shadow-md);
